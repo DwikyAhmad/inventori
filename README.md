@@ -41,7 +41,7 @@ Link to adaptable: ______
     1. Melakukan deploy adaptable dengan menyambungkan repo inventori di github
 
 ## 2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
-
+![Bagan MTV](Bagan MTV.png)
 
 ## 3. Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
 
