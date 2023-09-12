@@ -23,7 +23,8 @@ Link to adaptable: ______
       - name sebagai nama item dengan tipe CharField.
       - amount sebagai jumlah item dengan tipe IntegerField.
       - description sebagai deskripsi item dengan tipe TextField.
-    
+
+   
     1. Pada berkas models.py di main, buat class Item dengan argumen models.Model
     2. atribut pada class Item mengandung name, amount, dan description
     3. name diassign models.CharField()
