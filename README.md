@@ -42,8 +42,9 @@ Link to adaptable: ______
 
 ## 2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
 
+
 ## 3. Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
 
-Virtual environment diperlukan jika kita memiliki multiple django project yang memiliki versi python dan dependencies yang berbeda, kita dapat memiliki banyak versi dari python libraries dan modules terisolasi dari proyek lainnya. Menggunakan virtual environment juga dapat digunakan untuk melakukan tracking terhadap versi dependencies yang digunakan sehingga developer dapat mengetahui requirements apa yang dibutuhkan untuk menjalankan proyek.
+Virtual environment diperlukan jika kita memiliki multiple django project yang memiliki versi python dan dependencies yang berbeda, kita dapat memiliki banyak versi dari python libraries dan modules terisolasi dari proyek lainnya sehingga tidak terjadi conflict terhadap version yang digunakan. Menggunakan virtual environment juga dapat digunakan untuk melakukan tracking terhadap versi dependencies yang digunakan sehingga developer dapat mengetahui requirements apa yang dibutuhkan untuk menjalankan proyek.
 
 ## 4. Jelaskan apakah itu MVC, MVT, MVVM dan perbedaan dari ketiganya.
