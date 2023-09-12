@@ -2,7 +2,7 @@
 
 Link to adaptable: ______
 
-1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+## 1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 
   - Membuat sebuah proyek Django baru
     1. Membuat virtual environment (python -m venv env)
@@ -20,10 +20,9 @@ Link to adaptable: ______
     1. Mengimpor include dari django.urls lalu menambahkan rute URL ke main pada urlpatterns menggunakan include main.urls
 
   - Membuat model pada aplikasi main dengan nama Item dan memiliki atribut wajib sebagai berikut.
-      - name sebagai nama item dengan tipe CharField.
-      - amount sebagai jumlah item dengan tipe IntegerField.
-      - description sebagai deskripsi item dengan tipe TextField.
-
+        - name sebagai nama item dengan tipe CharField.
+        - amount sebagai jumlah item dengan tipe IntegerField.
+        - description sebagai deskripsi item dengan tipe TextField.
    
     1. Pada berkas models.py di main, buat class Item dengan argumen models.Model
     2. atribut pada class Item mengandung name, amount, dan description
@@ -41,4 +40,4 @@ Link to adaptable: ______
   - Melakukan deployment ke Adaptable terhadap aplikasi yang sudah dibuat sehingga nantinya dapat diakses oleh teman-temanmu melalui Internet.
     1. Melakukan deploy adaptable dengan menyambungkan repo inventori di github
 
-2. 
+## 2. 
