@@ -1,6 +1,6 @@
 # inventori
 
-Link to adaptable: ______
+Link to adaptable: [Adaptable Link](https://inventoridwiky.adaptable.app/main/)
 
 ## 1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 
