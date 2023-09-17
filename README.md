@@ -2,9 +2,18 @@
 
 Link to adaptable: https://inventoridwiky.adaptable.app/main/
 
-## 1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+## Tugas 3
 
-### Membuat sebuah proyek Django baru
+### 1. Apa perbedaan antara form POST dan form GET dalam Django?
+POST form merupakan form yang menyimpan data pada HTTP request body lalu dikirimkan ke server, karena data tidak terlihat di URL, POST form dilakukan untuk melakukan submission sensitive data atau large data. Submission dari form tersebut akan dikirimkan ke server untuk melakukan aksi seperti membuat new object pada server. Sedangkan form GET digunakan untuk menerima data dari server dengan menambahkan query pada URL parameters.
+
+### 2. Apa perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data?
+
+## Tugas 2
+
+### 1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+
+#### Membuat sebuah proyek Django baru
   1. Membuat virtual environment (python -m venv env)
   2. Mengaktifkan virtual environment (env\Scripts\activate.bat)
   3. Membuat berkas requirement.txt dengan isinya berupa dependencies:
@@ -12,14 +21,14 @@ Link to adaptable: https://inventoridwiky.adaptable.app/main/
   4. Menginstall dependencies (pip install -r requirements.txt)
   5. Membuat proyek django (django-admin startproject inventori .)
 
-### Membuat aplikasi dengan nama main pada proyek tersebut.
+#### Membuat aplikasi dengan nama main pada proyek tersebut.
   1. Pada direktori utama, jalankan command (python manage.py startapp main)
   2. Menambahkan 'main' pada INSTALLED_APPS variabel pada settings.py di direktori proyek
 
-### Melakukan routing pada proyek agar dapat menjalankan aplikasi main.
+#### Melakukan routing pada proyek agar dapat menjalankan aplikasi main.
   1. Mengimpor include dari django.urls lalu menambahkan rute URL ke main pada urlpatterns menggunakan include main.urls
 
-### Membuat model pada aplikasi main dengan nama Item dan memiliki atribut wajib sebagai berikut.
+#### Membuat model pada aplikasi main dengan nama Item dan memiliki atribut wajib sebagai berikut.
     - name sebagai nama item dengan tipe CharField.
     - amount sebagai jumlah item dengan tipe IntegerField.
     - description sebagai deskripsi item dengan tipe TextField.
@@ -31,24 +40,24 @@ Link to adaptable: https://inventoridwiky.adaptable.app/main/
   5. description diassign models.TextField()
   6. Melakukan migration model dengan command (python manage.py makemigrations) lalu (python manage.py migrate) untuk migrasi ke dalam basis data lokal
 
-### Membuat sebuah fungsi pada views.py untuk dikembalikan ke dalam sebuah template HTML yang menampilkan nama aplikasi serta nama dan kelas kamu.
+#### Membuat sebuah fungsi pada views.py untuk dikembalikan ke dalam sebuah template HTML yang menampilkan nama aplikasi serta nama dan kelas kamu.
   1. Membuat sebuah fungsi (contoh: show_main) yang akan mereturn sebuah data dan template html yang berada di folder templates di main
 
-### Membuat sebuah routing pada urls.py aplikasi main untuk memetakan fungsi yang telah dibuat pada views.py.
+#### Membuat sebuah routing pada urls.py aplikasi main untuk memetakan fungsi yang telah dibuat pada views.py.
   1. Menambahkan sebuah path di urlpatterns pada urls.py di direktori main dengan mereturn fungsi show_main
 
-### Melakukan deployment ke Adaptable terhadap aplikasi yang sudah dibuat sehingga nantinya dapat diakses oleh teman-temanmu melalui Internet.
+#### Melakukan deployment ke Adaptable terhadap aplikasi yang sudah dibuat sehingga nantinya dapat diakses oleh teman-temanmu melalui Internet.
   1. Melakukan deploy adaptable dengan menyambungkan repo inventori di github
 
-## 2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
+### 2. Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html.
 ![Bagan MTV](https://github.com/DwikyAhmad/inventori/blob/main/Bagan%20MTV.png)
 Pertama-tama user akan melakukan http request ke web django, dari aplikasi tersebut urls.py akan memeriksa url routingnya dan akan menjalankan fungsi pada views.py sesuai dengan urlpatterns, dari views.py akan dijalankan fungsi yang akan mereturn sebuah berkas template html yang diberi data yang diakses melalui model di models.py, melalui model dapat dilakukan read/write data, setelah itu akan dikirimkan berupa http response berupa template html yang sudah di proses ke user. 
 
-## 3. Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
+### 3. Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
 
 Virtual environment diperlukan jika kita memiliki multiple django project yang memiliki versi python dan dependencies yang berbeda, kita dapat memiliki banyak versi dari python libraries dan modules terisolasi dari proyek lainnya sehingga tidak terjadi conflict terhadap version yang digunakan. Menggunakan virtual environment juga dapat digunakan untuk melakukan tracking terhadap versi dependencies yang digunakan sehingga developer dapat mengetahui requirements apa yang dibutuhkan untuk menjalankan proyek.
 
-## 4. Jelaskan apakah itu MVC, MVT, MVVM dan perbedaan dari ketiganya.
+### 4. Jelaskan apakah itu MVC, MVT, MVVM dan perbedaan dari ketiganya.
 MVC merupakan design pattern pada web yang meliputi:
 1. Model: mengatur logika dan akses pada database
 2. View: Mengatur cara kerja data ditampilkan pada aplikasi
