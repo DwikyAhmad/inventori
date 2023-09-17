@@ -5,9 +5,13 @@ Link to adaptable: https://inventoridwiky.adaptable.app/main/
 ## Tugas 3
 
 ### 1. Apa perbedaan antara form POST dan form GET dalam Django?
-POST form merupakan form yang menyimpan data pada HTTP request body lalu dikirimkan ke server, karena data tidak terlihat di URL, POST form dilakukan untuk melakukan submission sensitive data atau large data. Submission dari form tersebut akan dikirimkan ke server untuk melakukan aksi seperti membuat new object pada server. Sedangkan form GET digunakan untuk menerima data dari server dengan menambahkan query pada URL parameters.
+form POST merupakan form yang menyimpan data pada HTTP request body lalu dikirimkan ke server, karena data tidak terlihat di URL, POST form dilakukan untuk melakukan submission sensitive data atau large data. Submission dari form tersebut akan dikirimkan ke server untuk melakukan aksi seperti membuat new object pada server. Sedangkan form GET digunakan untuk menerima data dari server dengan menambahkan query pada URL parameters.
 
 ### 2. Apa perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data?
+XML merupakan sebuah format data yang menggunakan markup sebagai struktur datanya, XML umumnya digunakan untuk melakukan perpindahan data antara sistem yang berbeda. JSON merupakan format data yang berbasis objek, JSON umumnya digunakan untuk pertukaran data antara aplikasi web dan layanan web, serta untuk penyimpanan konfigurasi. HTML merupakan format data yang digunakan untuk menampilkan data dalam bentuk halaman web pada browser, HTML tidak biasanya dilakukan untuk pertukaran data.
+
+### 3. Mengapa JSON sering digunakan dalam pertukaran data antara aplikasi web modern?
+
 
 ## Tugas 2
 
