@@ -30,8 +30,10 @@ Penggunaan cookies secara default belum tentu aman, masih ada risiko pihak ketig
 #### Mengimplementasikan fungsi registrasi, login, dan logout untuk memungkinkan pengguna untuk mengakses aplikasi sebelumnya dengan lancar.
 registrasi:<br>
 melakukan import UserCreationForm dan messages dari django sebagai built-in registration form dan alert message. membuat fungsi register yang melakukan render `register.html` dengan isi template form dari UserCreationForm, apabila parameter request method berupa POST, maka akan dilakukan validasi pada form dan dilakukan save dan dikirim messages dan akan di redirect ke page login. lalu akan ditambahkan path login ke urls.py<br>
+
 login:<br>
-melakukan import authenticate dan login dari django.contrib.auth untuk diimplementasikan kedalam fungsi login_user pada views.py di main, dari POST request akan diterima username dan password di fungsi itu dan akan dilakukan autentikasi, apabila dikenal maka akan di redirect ke halaman main, apabila salah diberikan message username atau password incorrect. jika request bukan POST return halaman `login.html` untuk login ulang. login.html pada templates akan berisi form dengan input username dan password dengan method POST. Setelah itu tambahkan path login ke urls.py
+melakukan import authenticate dan login dari django.contrib.auth untuk diimplementasikan kedalam fungsi login_user pada views.py di main, dari POST request akan diterima username dan password di fungsi itu dan akan dilakukan autentikasi, apabila dikenal maka akan di redirect ke halaman main, apabila salah diberikan message username atau password incorrect. jika request bukan POST return halaman `login.html` untuk login ulang. login.html pada templates akan berisi form dengan input username dan password dengan method POST. Setelah itu tambahkan path login ke urls.py<br>
+
 logout:<br>
 melakukan import logout dari django.contrib.auth dan membuat fungsi logout pada views.py yang akan menjalakan fungsi logout dengan parameter request dan akan redirect ke login page. pada main.html ditambahkan hyperlink ke logout button yang akan menuju path logout.
 
