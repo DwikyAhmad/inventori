@@ -2,6 +2,64 @@
 
 Link to adaptable: https://inventoridwiky.adaptable.app/main/
 
+## Tugas 5
+
+### 1. Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya.
+- Universal Selector<br>
+Bermanfaat untuk memilih semua elemen, tepat digunakan saat membuat default style dalam sebuah halaman web seperti menghilangkan padding dan margin bawaan.
+
+- Type Selector<br>
+Bermanfaat untuk memilih semua elemen dengan jenis yang sama, tepat digunakan untuk mengatur style pada elemen khusus seperti mengatur font-size pada tag p saja.
+
+- Class Selector<br>
+Bermanfaat untuk memilih elemen dengan nama class tertentu, tepat digunakan untuk melakukan suatu styling pada elemen dengan nama class yang sama.
+
+- ID Selector<br>
+Bermaanfaat untuk memilih elemen dengan ID yang unik, tepat digunakan untuk mengubah styling suatu elemen khusus yang telah diberi ID yang unik.
+
+- Descendant Selector<br>
+Bermaanfaat untuk memilih elemen yang merupakan keturunan dari elemen lainnya, tepat digunakan untuk memilih suatu elemen dengan tingkat susunan hierarki tertentu.
+
+- Child Selector<br>
+Bermanfaat untuk memilih elemen direct child dari suatu element, tepat digunakan untuk mengubah styling suatu elemen yang merupakan direct child dari suatu elemen tertentu.
+
+- Adjacent Sibling Selector<br>
+Bermanfaat untuk memilih suatu elemen yang berkesampingan dengan suatu elemen lain, tepat digunakan untuk mengatur style elemen yang saling berdekatan.
+
+- Atribute Selector<br>
+Bermanfaat untuk memilih suatu elemen berdasarkan atribut, tepat digunakan untuk mengubah suatu style elemen yang spesifik hanya memiliki atribut tersebut.
+
+### 2. Jelaskan HTML5 Tag yang kamu ketahui.
+Pada HTML5 terdapat tag semantik yaitu berupa:
+
+- `<header>`<br>
+Digunakan untuk mengelompokkan elemen-elemen yang berada di atas halaman seperti judul, logo, `<h1>` atau link navigation.
+
+- `<nav>`<br>
+Digunakan sebagai pengelompokkan link navigasi seperti main menu.
+
+- `<article>`<br>
+Digunakan untuk konten seperti berita, posting blog, atau cerita.
+
+- `<section>`<br>
+Digunakan untuk mengelompokkan konten yang berkaitan seperti bagian dari sebuah artikel.
+
+- `<footer>`<br>
+Digunakan untuk mengelompokkan elemen-elemen yang biasa ditemukan pada bagian bawah halaman seperti informasi hak cipta, link ke media sosial.
+
+### 3. Jelaskan perbedaan antara margin dan padding.
+Margin merupakan batas terluar dari suatu elemen, margin mengatur jarak antara suatu elemen dengan elemen lainnya. Padding merupakan batas dari isi konten elemen dengan bordernya, berguna untuk mengatur ruang di dalam sekitar elemen.
+
+### 4. Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya?
+Tailwind lebih fokus pada pendekata utility-first, yaitu menggabungkan kelas-kelas utilitas untuk membuat sebuah tampilan seperti mengganti warna, font, size dll. Tailwind membuat proses desain lebih bebas karena kustomisasi yang didukung oleh utility class tersebut yang membuat desainnya menjadi fleksibel, ukuran tailwind juga cenderung kecil karena hanya menggunakan class yang digunakan dalam proyek.
+
+Bootstrap menggunakan pendekatan komponen sehingga membuat tampilan website menggunakna komponen yang telah dibuat sebelumnya seperti navbar, card, form, dll. Bootstrap lebih mudah digunakan untuk pemula karena hanya perlu memahami penggunaan komponennya. Bootstrap memiliki size yang lebih besar karena mengandung banyak komponen dan style bawaan.
+
+Kita dapat menggunakan bootstrap jika kita membutuhkan waktu proses pengembangan yang lebih cepat karena komponen yang sudah jadi tinggal dipakai dan dikustomisasi sesuai kebutuhan, Tailwind bisa digunakan jika desain sebuah website membutuhkan kustomisasi yang lebih tinggi karena tailwind memiliki kontrol yang lebih besar atas kustomisasinya.
+
+### 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+Pertama-tama saya memasang bootstrap pada head di `base.html` lalu saya menambahkan dulu fitur edit dan delete product pada inventory, setelah itu saya memasang komponen navbar yang disediakan oleh bootstrap dan mengubah navigasi linknya menjadi judul, nama, dan link untuk login atau logout tergantung dengan halamannya, lalu untuk inventory saya mengganti tampilan informasi table menjadi card untuk masing-masing item dan ditambahkan tombol edit dan delete di sampingnya, semua tampilan juga saya tengahkan menggunakan flexbox dari class bootstrap, lalu saya menambahkan sedikit warna pada button dengan menggunakan class bawaan dari bootstrap.
+
 ## Tugas 4
 
 ### 1. Apa itu Django UserCreationForm, dan jelaskan apa kelebihan dan kekurangannya?

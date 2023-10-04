@@ -1,47 +1,74 @@
 {% extends "base.html" %} 
 
 {% block content %}
+<nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">{{appname}}</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">{{name}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">{{class}}</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'main:logout' %}">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
 
-<h1>{{ appname }}</h1>
+<div class="container-fluid d-flex justify-content-center">
+    <div>
+        <h1>{{ appname }}</h1>
+    
+        <h5>Name:</h5>
+        <p>{{ name }}</p>
+        <h5>Class:</h5>
+        <p>{{ class }}</p>
 
-<h5>Name:</h5>
-<p>{{ name }}</p>
-<h5>Class:</h5>
-<p>{{ class }}</p>
-
-
-<table>
-    <tr>
-        <th>Name</th>
-        <th>Amount</th>
-        <th>Description</th>
-    </tr>
-
-    {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
-
-    {% for item in items %}
-        <tr>
-            <td>{{item.name}}</td>
-            <td>{{item.amount}}</td>
-            <td>{{item.description}}</td>
-        </tr>
-    {% endfor %}
-</table>
-
-<br />
-
-<a href="{% url 'main:create_product' %}">
-    <button>
-        Add New Item
-    </button>
-</a>
-
-<a href="{% url 'main:logout' %}">
-    <button>
-        Logout
-    </button>
-</a>
-
-<h5>Sesi terakhir login: {{ last_login }}</h5>
+        {% for item in items %}
+        <div class="card w-100 my-2">
+            <div class="card-header d-flex justify-content-between">
+              Items {{item.pk}}
+            <div>
+                <a class="btn btn-warning btn-sm" href="{% url 'main:edit_product' item.pk %}">
+                    Edit
+                </a>
+                <a class="btn btn-danger btn-sm" href="{% url 'main:delete_product' item.pk %}">
+                    Delete
+                </a>
+            </div>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Name: {{item.name}}</li>
+                <li class="list-group-item">Amount: {{item.amount}}</li>
+                <li class="list-group-item">Description: {{item.description}}</li>
+            </ul>
+        </div>
+        {% endfor %}
+        
+    
+        <br />
+    
+        <div class="py-1">
+            <a class="btn btn-primary" href="{% url 'main:create_product' %}">
+                    Add New Item
+            </a>
+            <a class="btn btn-secondary" href="{% url 'main:logout' %}">
+                Logout
+            </a>
+        </div>
+    
+        <div class="py-2">
+            <h5>Sesi terakhir login: {{ last_login }}</h5>
+        </div>
+    </div>
+</div>
 
 {% endblock content %}
