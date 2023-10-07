@@ -36,7 +36,7 @@ Untuk membuat ajax get, function get_product_json dibuat dengan menerima item ya
 Dari Bootstrap, akan diambil komponen berupa modal yang akan berisi sebuah form untuk membuat objek items yang akan ditampilkan melalui sebuah button. Untuk menambahkan objek melalui ajax akan dibuat function add_product_ajax yang akan menyimpan object ke database berdasarkan request yang diberikan, lalu function tersebut dimasukkan ke urls. Lalu pada javascript akan dibuat function addProduct untuk melakukan POST request dengan fetch untuk membuat item baru dan melakukan refresh product, setelah itu form pada modal akan dilakukan reset sehingga form menjadi kosong kembali.
 
 - Melakukan perintah collectstatic.<br>
-Untuk melakukan perintah collectstatic pada `settings.py` di folder proyek akan di tambahkan `STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')` untuk mengatur lokasi penyimpanan static dari berbagai aplikasi. Setelah itu dijalankan perintah `python manage.py collectstatic` pada terminal.
+Untuk melakukan perintah collectstatic pada `settings.py` di folder proyek akan di tambahkan `STATIC_ROOT  = os.path.join(BASE_DIR, 'static')` untuk mengatur lokasi penyimpanan static dari berbagai aplikasi. Setelah itu dijalankan perintah `python manage.py collectstatic` pada terminal.
 
 ## Tugas 5
 
