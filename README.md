@@ -2,6 +2,42 @@
 
 Link to adaptable: https://inventoridwiky.adaptable.app/main/
 
+## Tugas 6
+
+### 1. Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
+synchronous programming merupakan cara kerja eksekusi sebuah perintah yang dilakukan secara berurut satu persatu dengan selalu menunggu perintah tersebut selesai dieksekusi terlebih dahulu lalu dilanjutkan ke perintah berikutnya, pada asynchronous programming, perintah akan dijalankan secara paralel sehingga perintah lainnya dapat tetap berjalan tanpa harus menunggu perintah sebelumnya untuk selesai di eksekusi, hal ini membuat aplikasi tetap responsif apabila terdapat perintah yang memerlukan waktu yang banyak sehingga aplikasi tidak terhenti untuk menunggu perintah tersebut selesai dahulu. 
+
+### 2. Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma event-driven programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.
+Event-driven programming merupakan pendekatan dalam pengembangan aplikasi yang di mana aplikasi tersebut merespons sebuah event/peristiwa secara asinkronus, hal ini dilakukan agar program dapat berjalan secara responsif dan interaktif, salah satu contoh penerapan yang dilakukan pada tugas ini adalah melakukan get product menggunakan fungsi asinkronus pada javascript yang akan melakukan fetch dari database dalam bentuk json. fungsi ini dijalankan saat melakukan refresh products dengan melakukan await dan menampilkannya dalam bentuk card, lalu juga dari fungsi add product pada javascript ditambahkan sebuah add event ke tombol add product by AJAX untuk melakukan add product dan menjalankan fungsi refresh product secara asinkronus.
+
+### 3. Jelaskan penerapan asynchronous programming pada AJAX.
+Asynchronous programming pada AJAX merupakan sebuah teknologi yang memungkinkan pertukaran data antara website dengan server tanpa perlu melakukan refresh pada halaman tersebut. Contoh penerapan yang dapat dilakukan adalah melakukan fetch untuk merequest data dari server dan menampilkannya pada browser, melakukan request untuk membuat instance object untuk disimpan ke database. Data yang digunakan dapat berupa bentuk XML atau JSON.
+
+### 4. Pada PBP kali ini, penerapan AJAX dilakukan dengan menggunakan Fetch API daripada library jQuery. Bandingkanlah kedua teknologi tersebut dan tuliskan pendapat kamu teknologi manakah yang lebih baik untuk digunakan.
+Fetch Api:<br>
+- Sudah menjadi bagian dari standar Javascript dan tersedia pada sebagian besar browser yang lebih baru
+- Fetch API lebih ringan dari JQuery
+- Menggunakan Promises, memerlukan kode yang lebih banyak
+- Plugin dan ekstensi belum selengkap JQuery
+
+JQuery:<br>
+- Teknologi sudah hadir bertahun-tahun, mendukung banyak browser utama, termasuk yang lebih lama
+- Memiliki ukuran yang besar karena library yang memiliki banyak fitur tambahan
+- Lebih mudah digunakan karena sintaks yang mudah dipahami dan lebih singkat untuk AJAX
+- Memiliki banyak plugin dan ekstensi untuk berbagai keperluan
+
+Kedua teknologi memiliki kelebihan dan kekurangannya masing-masing, apabila proyek kita membutuhkan kinerja dan ukuran yang lebih ringan lebih baik kita menggunakan Fetch API, tetapi jika kita lebih membutuhkan kemudahan penggunaan dan dukungan pada jangkauan browser lebih luas seperti browser yang lebih lama, kita lebih baik menggunakan JQuery.
+
+### 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+- AJAX GET:<br>
+Untuk membuat ajax get, function get_product_json dibuat dengan menerima item yang berkaitan dengan user sedang login dan mengirim data tersebut dalam bentuk json melalui httpresponse dan menambahkan function tersebut ke urls. function tersebut akan digunakan pada script asinkronus pada main.html yaitu getProducts untuk menerima response menggunakan fetch API. Untuk menampilkan data items dibuat asynchronous function refreshProducts untuk melakukan await dari function getProducts dan menampilkan tiap items pada card yang nantinya akan di tempelkan ke div dengan class product_card melalui DOM HTML.
+
+- AJAX POST:<br>
+Dari Bootstrap, akan diambil komponen berupa modal yang akan berisi sebuah form untuk membuat objek items yang akan ditampilkan melalui sebuah button. Untuk menambahkan objek melalui ajax akan dibuat function add_product_ajax yang akan menyimpan object ke database berdasarkan request yang diberikan, lalu function tersebut dimasukkan ke urls. Lalu pada javascript akan dibuat function addProduct untuk melakukan POST request dengan fetch untuk membuat item baru dan melakukan refresh product, setelah itu form pada modal akan dilakukan reset sehingga form menjadi kosong kembali.
+
+- Melakukan perintah collectstatic.<br>
+Untuk melakukan perintah collectstatic pada `settings.py` di folder proyek akan di tambahkan `STATIC_ROOT  = os.path.join(BASE_DIR, 'staticfiles')` untuk mengatur lokasi penyimpanan static dari berbagai aplikasi. Setelah itu dijalankan perintah `python manage.py collectstatic` pada terminal.
+
 ## Tugas 5
 
 ### 1. Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya.
