@@ -2,6 +2,8 @@
 
 Link to adaptable: https://inventoridwiky.adaptable.app/main/
 
+Link to PaaS PBP Fasilkom UI: http://dwiky-ahmad-tugas.pbp.cs.ui.ac.id/
+
 ## Tugas 6
 
 ### 1. Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
